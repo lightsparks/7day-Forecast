@@ -3,10 +3,8 @@ const app = new Vue({
     data: {
         message: '',
     },
-
     methods: {
 
 
     },
 });
-

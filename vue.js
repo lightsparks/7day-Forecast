@@ -23,3 +23,7 @@ const app = new Vue({
             </div>
         </div>`,
 })
+
+vue.component = new vue({
+    data
+})

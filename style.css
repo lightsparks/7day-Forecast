@@ -1,3 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/****** general styling ******/
+
+body {
+    background-color: darkcyan;
+    font-family: 'Sulphur Point', sans-serif;
+    text-shadow: 1px 1px 5px #000000;
+    color: #ffffff;
+}
+
+h1#title {
+    font-weight: 700;
+    font-size: 48px;
+    margin: 20px;
+    text-align: center;
+}
+
+/****** today ******/
+
+#todayWrap {
+    margin: auto;
+    width: 50%;
+    padding: 6px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #000000;
+}
+
+#todayContainer {
+    background-color: deepskyblue;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 6px;
+}
+
+/****** IMAGE for TODAY ******/
+
+#todayContainer > div.todayImage {
+    height: 80px;
+    width: 80px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#todayContainer > div.todayImage > img {
+    height: 60px;
+}
+
+/****** TEXT for TODAY ******/
+
+#todayContainer > div.dayText {
+    height: 80px;
+    margin: 20px;
+}
+
+#todayContainer > div.dayText > h2 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#todayContainer > div.dayText > h3 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 28px;
+}
 
 
+/****** TEMPERATURE for TODAY ******/
 
+#todayContainer > div.temperature {
+    font-size: 65px;
+    font-weight: 700;
+    text-align: center;
+    height: 80px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#todayContainer > div.temperature > span.temperature {
+    font-size: 50px;
+    font-weight: 400;
+}

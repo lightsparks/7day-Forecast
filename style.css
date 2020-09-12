@@ -7,10 +7,12 @@
 /****** general styling ******/
 
 body {
-    background-image: url("images/wp2394184-anime-sky-wallpapers.jpg"): ;
+    background-image: url("images/bg-anime-wallpaper.jpg");
+    background-repeat: no-repeat;
     font-family: 'Sulphur Point', sans-serif;
     text-shadow: 1px 1px 5px #000000;
     color: #ffffff;
+    min-width: 500px;
 }
 
 h1#title {
@@ -20,73 +22,203 @@ h1#title {
     text-align: center;
 }
 
-/****** today ******/
+/****** INPUT ******/
 
-#todayWrap {
+.input-wrap {
+    width: 340px;
+    display: flex;
+    justify-content: center;
     margin: auto;
-    width: 50%;
+}
+
+::placeholder {
+    color: lightsteelblue;
+}
+
+.input-wrap .searchbox {
+    width: 100%;
+    padding: 12px;
+    color: #313131;
+    font-size: 16px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0px 16px 0px 16px;
+    transition: 0.4s;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.input-wrap .searchbox:focus {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 16px 0px 16px 0px;
+}
+
+.input-wrap .searchbox:focus::placeholder {
+    color: steelblue;
+}
+
+/****** TODAY ******/
+
+.currentOuterWrap {
+    margin: auto;
+    width: 340px;
     padding: 6px;
     border: 2px solid #FFFFFF;
-    border-radius: 10px;
+    border-radius: 26px;
     box-shadow: 2px 2px 6px #000000;
 }
 
-#todayContainer {
-    background-color: deepskyblue;
+.currentInnerWrap {
+    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");
     width: 100%;
     margin: auto;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 6px;
+    flex-direction: column;
+    border-radius: 18px;
+    /* todo: background-color: rgba(0, 0, 0, 0.3);*/
+    padding: 15px;
+    padding-bottom: 0px;
 }
 
-/****** IMAGE for TODAY ******/
+/******* GEO ******/
 
-#todayContainer > div.todayImage {
-    height: 80px;
-    width: 80px;
-    padding: 20px;
-    margin: 10px;
-}
-
-#todayContainer > div.todayImage > img {
-    height: 60px;
-}
-
-/****** TEXT for TODAY ******/
-
-#todayContainer > div.dayText {
-    height: 80px;
-    margin: 20px;
-}
-
-#todayContainer > div.dayText > h2 {
-    text-align: left;
-    font-weight: 400;
-    font-size: 18px;
-    padding-top: 10px;
-}
-
-#todayContainer > div.dayText > h3 {
-    text-align: left;
-    font-weight: 700;
-    font-size: 28px;
-}
-
-
-/****** TEMPERATURE for TODAY ******/
-
-#todayContainer > div.temperature {
-    font-size: 65px;
-    font-weight: 700;
+.geodata {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    height: 80px;
-    margin: 10px;
-    padding: 10px;
 }
 
-#todayContainer > div.temperature > span.temperature {
-    font-size: 50px;
+.geodata > #location {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.geodata > #date {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/****** CONDITION  ******/
+
+#conditionWrap {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.condition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+}
+
+#conditionWrap > img {
+    height: 90px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+div#conditionWrap > div.condition {
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 300;
+    height: 45px;
+    text-align: center;
+    margin: auto;
+}
+
+
+/****** TEMPERATURE ******/
+
+div.outerTempWrap {
+    display: flex;
+    justify-content: center;
+}
+
+div.innerTempWrap {
+    text-align: right;
+    width: 65%;
+    padding: 5px;
+}
+
+div.innerTempWrap > span.currentTemp#currentTemp {
+    font-weight: 700;
+    font-size: 90px;
+    text-shadow: 1px 1px 6px #000000;
+}
+
+div.innerTempWrap > span.currentTemp#degree {
+    font-weight: 300;
+    font-size: 80px;
+    text-shadow: 1px 1px 6px #000000;
+}
+
+div.innerTempWrap > span.currentTemp#celsius {
     font-weight: 400;
+    font-size: 60px;
+}
+
+/****** HI-LO TEMPERATURE ******/
+
+div.minmaxTempWrap {
+    height: 128px;
+    width: 35%;
+    padding: 10px;
+    padding-top: 35px;
+}
+
+div.minmax {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#splitBorder {
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 1px 5px #000000;
+    margin: 5px;
+}
+
+/****** WEEK ******/
+
+.weekContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+/****** TODAY ******/
+
+.weekDayOuterWrap {
+    margin: 10px;
+    width: 175px;
+    padding: 6px;
+    border: 2px solid #FFFFFF;
+    border-radius: 26px;
+    box-shadow: 2px 2px 6px #000000;
+}
+
+.weekDayInnerWrap {
+    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");
+    width: 100%;
+    margin: auto;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    /* todo: background-color: rgba(0, 0, 0, 0.3);*/
+}
+
+.weekDayInnerWrap > img {
+    width: 40px;
+}
+
+.weekdayIcon, .weekdayCondition, .weekdayTemperature {
+    text-align: center;
 }

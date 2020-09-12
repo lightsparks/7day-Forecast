@@ -9,14 +9,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <h1 id="title">Weather app</h1>
 
-<div id="app"></div>
+<div id="app">
+
+    <!------ INPUT ------>
+    <!--form class="input-wrap" v-on:submit.prevent="fetchWeather">
+        <input
+                type="text"
+                class="searchbox"
+                placeholder="Search for a city..."
+                maxlength="60"
+                v-model="query"
+                autocomplete="off"
+                autofocus
+        />
+    </form-->
+
+    <div class="currentOuterWrap">
+        <div class="currentInnerWrap">
+            <div class="geodata">
+                <h3 id="location">Hilversum, NL</h3>
+                <h2 id="date">{{ currentDate }}</h2>
+            </div>
+
+            <div id="conditionWrap">
+                <img alt="icon" class="condition" :src="currentWeather.icon"/>
+                <div class="condition">{{ currentWeather.condition }}</div>
+            </div>
+
+            <div class="outerTempWrap">
+                <div class="innerTempWrap">
+                    <span class="currentTemp" id="currentTemp">{{ currentWeather.temperatureNow }}</span><span
+                        class="currentTemp" id="degree">°</span><span class="currentTemp" id="celsius">C</span>
+                </div>
+
+                <div class="minmaxTempWrap">
+                    <div class="minmax" id="currentMax">Hi: {{ currentWeather.hiTemp }}°C</div>
+                    <div id="splitBorder"></div>
+                    <div class="minmax" id="currentMin">Lo: {{ currentWeather.loTemp }}°C</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!------ UPCOMING 7 DAYS ------>
+    <div class="weekContainer">
+        <div v-for="weekday in forecastData">
+            <div class="weekDayOuterWrap">
+                <div class="weekDayInnerWrap">
+                    <img class="weekdayIcon" alt="icon" :src="customIcon(weekday.weather[0].icon)"/>
+                    <div class="weekdayCondition">{{ weekday.weather[0].description }}</div>
+                    <div class="weekdayTemperature">{{ Math.round(weekday.temp.day) }}°C</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 
 <script src="./vue.js"></script>
+
 </body>
 </html>
+
+
+

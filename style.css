@@ -8,7 +8,7 @@
 
 body {
     background-image: url("images/bg-anime-wallpaper.jpg");
-    background-repeat: no-repeat;
+    /*background: url("images/4512352-group-of-women-anime-girls-sea-summer-bikini-sky-harbor-life.png");*/
     font-family: 'Sulphur Point', sans-serif;
     text-shadow: 1px 1px 5px #000000;
     color: #ffffff;
@@ -73,14 +73,14 @@ h1#title {
 }
 
 .currentInnerWrap {
-    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");
+/*    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");*/
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     border-radius: 18px;
-    /* todo: background-color: rgba(0, 0, 0, 0.3);*/
-    padding: 15px;
+    padding: 10px;
     padding-bottom: 0px;
 }
 
@@ -113,7 +113,8 @@ h1#title {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 15px;
+    margin: 10px;
+
 }
 
 #conditionWrap > img {
@@ -125,7 +126,7 @@ h1#title {
 div#conditionWrap > div.condition {
     font-style: italic;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     height: 45px;
     text-align: center;
     margin: auto;
@@ -186,6 +187,12 @@ div.minmax {
 
 /****** WEEK ******/
 
+.forecastTitle {
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
 .weekContainer {
     display: flex;
     justify-content: center;
@@ -204,7 +211,8 @@ div.minmax {
 }
 
 .weekDayInnerWrap {
-    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");
+/*    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");*/
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     width: 100%;
     margin: auto;
     border-radius: 18px;
@@ -212,13 +220,26 @@ div.minmax {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    /* todo: background-color: rgba(0, 0, 0, 0.3);*/
 }
 
 .weekDayInnerWrap > img {
-    width: 40px;
+    margin: auto;
+    width: 45px;
+    margin-top: 10px;
 }
 
-.weekdayIcon, .weekdayCondition, .weekdayTemperature {
+.weekdayCondition {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
     text-align: center;
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.weekdayTemperature {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5px;
 }

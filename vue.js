@@ -6,8 +6,6 @@ const app = new Vue({
         currentDate: new Date().toLocaleString(),
         currentWeather: {},
         forecastData: {},
-
-        /*        query: '',*/
     },
 
     mounted: function () {

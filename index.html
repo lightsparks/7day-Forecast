@@ -34,7 +34,7 @@
         <div class="currentInnerWrap">
             <div class="geodata">
                 <h3 id="location">Hilversum, NL</h3>
-                <h2 id="date">{{ currentDate }}</h2>
+                <h2 id="date">{{ currentDate | dateparse('dddd, dd MMMM yyyy') }}</h2>
             </div>
 
             <div id="conditionWrap">

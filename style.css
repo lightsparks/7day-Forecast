@@ -17,7 +17,7 @@ body {
 
 h1#title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     margin: 20px;
     text-align: center;
 }
@@ -93,7 +93,7 @@ h1#title {
 }
 
 .geodata > #location {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -147,7 +147,7 @@ div.innerTempWrap {
 
 div.innerTempWrap > span.currentTemp#currentTemp {
     font-weight: 700;
-    font-size: 90px;
+    font-size: 85px;
     text-shadow: 1px 1px 6px #000000;
 }
 

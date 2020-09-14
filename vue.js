@@ -1,11 +1,13 @@
 const app = new Vue({
     el: '#app',
     data: {
-        api_key: 'd1e902b667baccdb37cfbc96ad629f00',
-        base_url: 'http://api.openweathermap.org/data/2.5/find?q=',
+/*        api_key: 'd1e902b667baccdb37cfbc96ad629f00',
+        base_url: 'http://api.openweathermap.org/data/2.5/find?q=',*/
         currentDate: new Date().toLocaleString(),
         currentWeather: {},
         forecastData: {},
+        query: '',
+        city: '',
     },
 
     mounted: function () {

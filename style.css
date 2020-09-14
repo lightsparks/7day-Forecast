@@ -9,23 +9,26 @@
 body {
     background-image: url("images/bg-anime-wallpaper.jpg");
     /*background: url("images/4512352-group-of-women-anime-girls-sea-summer-bikini-sky-harbor-life.png");*/
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Sulphur Point', sans-serif;
     text-shadow: 1px 1px 5px #000000;
     color: #ffffff;
-    min-width: 500px;
+    width: 100vw;
 }
 
 h1#title {
     font-weight: 700;
     font-size: 40px;
-    margin: 20px;
+    margin: 10px;
+    margin-top: 15px;
     text-align: center;
 }
 
 /****** INPUT ******/
 
 .input-wrap {
-    width: 340px;
+    width: 300px;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -36,6 +39,7 @@ h1#title {
 }
 
 .input-wrap .searchbox {
+    font-family: 'Sulphur Point', sans-serif;
     width: 100%;
     padding: 12px;
     color: #313131;
@@ -46,34 +50,56 @@ h1#title {
     background: none;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 0px 16px 0px 16px;
+    border-radius: 24px 24px 24px 24px;
     transition: 0.4s;
     border-bottom: 2px solid #FFFFFF;
+    margin-bottom: 10px;
 }
 
 .input-wrap .searchbox:focus {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 16px 0px 16px 0px;
+    font-family: 'Sulphur Point', sans-serif;
+
 }
 
 .input-wrap .searchbox:focus::placeholder {
     color: steelblue;
+    font-family: 'Sulphur Point', sans-serif;
+}
+
+.respDesign {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.main {
+    margin: 20px;
+}
+
+.weekWrap {
+    flex-flow: column wrap;
+    align-self: stretch;
+    margin: 10px;
 }
 
 /****** TODAY ******/
 
 .currentOuterWrap {
     margin: auto;
-    width: 340px;
+    width: 300px;
     padding: 6px;
     border: 2px solid #FFFFFF;
     border-radius: 30px;
     box-shadow: 2px 2px 6px #000000;
+    margin-bottom: 20px;
 }
 
 .currentInnerWrap {
-/*    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");*/
+    /*    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");*/
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     width: 100%;
     margin: auto;
@@ -84,16 +110,18 @@ h1#title {
     padding-bottom: 0px;
 }
 
+
 /******* GEO ******/
 
 .geodata {
     display: flex;
     flex-direction: column;
     text-align: center;
+    height: 20%;
 }
 
 .geodata > #location {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
 }
 
@@ -106,7 +134,7 @@ h1#title {
 
 #conditionWrap {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .condition {
@@ -114,7 +142,7 @@ h1#title {
     flex-direction: column;
     justify-content: center;
     margin: 10px;
-
+    height: 30%;
 }
 
 #conditionWrap > img {
@@ -137,6 +165,7 @@ div#conditionWrap > div.condition {
 div.outerTempWrap {
     display: flex;
     justify-content: center;
+    height: 30%;
 }
 
 div.innerTempWrap {
@@ -194,15 +223,14 @@ div.minmax {
 
 .weekContainer {
     display: flex;
-    justify-content: center;
-    margin-top: 5px;
+    flex-direction: column;
+    margin-top: 3px;
 }
 
-/****** TODAY ******/
+/****** WEEKDAY ******/
 
 .weekDayOuterWrap {
-    margin: 10px;
-    width: 175px;
+    margin: 20px;
     padding: 6px;
     border: 2px solid #FFFFFF;
     border-radius: 30px;
@@ -210,35 +238,43 @@ div.minmax {
 }
 
 .weekDayInnerWrap {
-/*    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");*/
+    /*    background-image: url("./images/abstract-wave-pastel-upside-down.jpg");*/
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     width: 100%;
     margin: auto;
     border-radius: 24px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     padding: 10px;
 }
 
-.weekDayInnerWrap > img {
+.weekConditionWrap > img {
     margin: auto;
     width: 45px;
-    margin-top: 10px;
+}
+
+.weekConditionWrap {
+    display: flex;
+    justify-content: center;
 }
 
 .weekdayCondition {
+    display: flex;
+    align-self: flex-end;
     font-style: italic;
     font-size: 18px;
     font-weight: 400;
     text-align: center;
-    margin-top: 10px;
+    margin: 10px;
     text-shadow: 1px 1px 5px #000000;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .weekdayTemperature {
-    font-size: 21px;
+    display: flex;
+    align-self: flex-end;
+    font-size: 28px;
     font-weight: 700;
     text-align: center;
-    margin-top: 5px;
 }

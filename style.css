@@ -250,6 +250,7 @@ div.minmax {
 .weekDayInnerWrap > img {
     width: 45px;
     height: 45px;
+    display: block;
 }
 
 .weekConditionWrap {

@@ -70,8 +70,9 @@
             <div v-for="weekday in forecastData">
                 <div class="weekDayOuterWrap">
                     <div class="weekDayInnerWrap">
+                        <img class="weekdayIcon" alt="icon" :src="customIcon(weekday.weather[0].icon)"/>
                         <div class="weekConditionWrap">
-                            <img class="weekdayIcon" alt="icon" :src="customIcon(weekday.weather[0].icon)"/>
+
                             <div class="weekdayCondition">{{ weekday.weather[0].description }}</div>
                         </div>
                         <div class="weekdayTemperature">{{ Math.round(weekday.temp.day) }}°C</div>

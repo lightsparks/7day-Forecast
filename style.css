@@ -9,12 +9,12 @@
 body {
     background-image: url("images/bg-anime-wallpaper.jpg");
     /*background: url("images/4512352-group-of-women-anime-girls-sea-summer-bikini-sky-harbor-life.png");*/
-    background-size: 100vh;
+    background-size: cover;
     background-attachment: fixed;
     font-family: 'Sulphur Point', sans-serif;
     text-shadow: 1px 1px 5px #000000;
     color: #ffffff;
-    width: 100vw;
+    height± 100%;
 }
 
 h1#title {

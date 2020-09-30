@@ -17,14 +17,14 @@ body {
     font-family: 'Sulphur Point', sans-serif;
     text-shadow: 1px 1px 5px #000000;
     color: #ffffff;
-    min-height: 100vh;
+    min/height: 100vh;
 }
 
 body:after{
     content:"";
     position:fixed; /* stretch a fixed position to the whole screen */
     top:0;
-    min-height:100vh; /* fix for mobile browser address bar appearing disappearing */
+/*    height:100vh; !* fix for mobile browser address bar appearing disappearing *!*/
     left:0;
     right:0;
     z-index:-1; /* needed to keep in the background */

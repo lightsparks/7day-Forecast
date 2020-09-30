@@ -9,12 +9,30 @@
 body {
     background-image: url("images/bg-anime-wallpaper.jpg");
     /*background: url("images/4512352-group-of-women-anime-girls-sea-summer-bikini-sky-harbor-life.png");*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     font-family: 'Sulphur Point', sans-serif;
     text-shadow: 1px 1px 5px #000000;
     color: #ffffff;
     height± 100%;
+}
+
+body:after{
+    content:"";
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
+    left:0;
+    right:0;
+    z-index:-1; /* needed to keep in the background */
+    background: url("images/bg-anime-wallpaper.jpg") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1#title {

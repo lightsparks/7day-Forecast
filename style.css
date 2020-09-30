@@ -7,8 +7,8 @@
 /****** general styling ******/
 
 body {
-/*    background-image: url("images/bg-anime-wallpaper.jpg");*/
-    background: url("images/4512352-group-of-women-anime-girls-sea-summer-bikini-sky-harbor-life.png");
+    background-image: url("images/bg-anime-wallpaper.jpg");
+    /*background: url("images/4512352-group-of-women-anime-girls-sea-summer-bikini-sky-harbor-life.png");*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
